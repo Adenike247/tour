@@ -36,9 +36,9 @@ export default function Tours({ tours, onRemoveTour }: ToursProps) {
         {tours.map((tour) => (
           <div
             key={tour.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full" // Added flex layout
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col " // Added flex layout
           >
-            <div className="relative w-full h-48 flex-shrink-0"> {/* Prevent image squishing */}
+            <div className="relative w-full h-48 shrink-0"> {/* Prevent image squishing */}
               <Image
                 src={tour.image}
                 alt={tour.name}
@@ -52,7 +52,7 @@ export default function Tours({ tours, onRemoveTour }: ToursProps) {
             </div>
             
             {/* Content area with flex layout */}
-            <div className="p-4 flex flex-col flex-grow"> {/* Added flex layout */}
+            <div className="p-4 flex flex-col grow"> {/* Added flex layout */}
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-semibold text-gray-800">
                   {tour.name}
